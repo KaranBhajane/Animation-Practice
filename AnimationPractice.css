@@ -1,0 +1,123 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.outerBox {
+    height: 30rem;
+    width: 40rem;
+    border: 5px solid black;
+    position: relative;
+    top: 10rem;
+    left: 5rem;
+}
+
+.innerBox {
+    height: 5rem;
+    width: 5rem;
+    border: 3px solid black;
+    animation: box;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: ease;
+}
+
+@keyframes box {
+    0%, 100% {
+        transform: translate(0, 0);
+        background-color: green;
+    }
+
+    25% {
+        transform: translate(34.7rem, 0);
+        background-color: red;
+    }
+
+    50% {
+        transform: translate(34.7rem, 24.5rem);
+        background-color: grey;
+    }
+
+    75% {
+        transform: translate(0, 24.5rem);
+        background-color: purple;
+    }
+}
+
+.revBox {
+    height: 5rem;
+    width: 5rem;
+    border: 3px solid black;
+    position: relative;
+    bottom: 87px;
+    animation: box;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+    animation-timing-function: ease;
+    animation-name: ReverseBox;
+    animation-fill-mode: both;
+}
+
+@keyframes ReverseBox {
+    0%, 100% {
+        transform: translate(0, 0);
+        background-color: green;
+    }
+
+    25% {
+        transform: translate(35rem, 0);
+        background-color: purple;
+    }
+
+    50% {
+        transform: translate(35rem, 24.5rem);
+        background-color: grey;
+    }
+
+    75% {
+        transform: translate(0, 24.5rem);
+        background-color: red;
+    }
+
+}
+.circle{
+    height: 5rem;
+    width: 5rem;
+    border: 2px solid black;
+    position:relative;
+    left: 18rem;
+    top: 2rem;
+    border-radius: 25%;
+    /* background-color: blueviolet; */
+    /* animation: inCirc 5s linear 0s infinite forwards ; */
+}
+.circle:hover{
+    animation: inCirc 5s linear 0s infinite forwards ;
+
+   
+}
+@keyframes inCirc {
+    0%{
+        transform: rotate(0deg);
+        background-color: green;
+    }
+    25%{
+        transform: rotate(90deg);
+        background-color: rgb(19, 243, 75);
+    }
+    50%{
+        transform: rotate(180deg);
+        background-color: goldenrod;
+    }
+    75%{
+        transform: rotate(270deg);
+        background-color: aqua;
+    }
+    100%{
+        transform: rotate(360deg);
+        background-color: violet;
+    }
+    
+}
